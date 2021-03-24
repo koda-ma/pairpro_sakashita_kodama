@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF=8">
+    <title>タイトル</title>
+    <script src="https://kit.fontawesome.com/2cffd66cd0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            width: 100%;
+            background-image: url(images/AME.jpg);
+        }
+        /*=============================================
+            header
+        ==============================================*/
+        header {
+            background-color: #ddd;
+            position: relative;
+            height: 300px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        header h1 {
+            position: absolute;
+            margin: auto 10px;
+            top: 40%;
+            line-height: 1.1;
+            font-size: 3rem;
+            color: #ddd;
+            text-shadow: 0 0 10px #0eb;
+        }
+        /*=============================================
+            main
+        ==============================================*/
+        main {
+            background-color: rgba(255, 255, 255, 0.7);
+            max-width: 800px;
+            /*ブラウザのサイズで800px以上はサイズに合わせて大きくしない*/
+            /*padding分は含まないため800pxを超えてしまうため↓を設定する*/
+            box-sizing: border-box;
+            /**/
+            margin: auto;
+            /*左右に余白(中央揃え)*/
+            padding: 2% 2%;
+            /*内側に余白を付ける*/
+        }
+        main section {
+            padding: 2%;
+        }
+        #profile {
+            background-color: rgba(100, 150, 160, 0.4);
+            margin-bottom: 3%;
+            position: relative;
+        }
+        #profile h1 {
+            background-image: url(images/profile_icon.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding-left: 20px;
+        }
+        #profile dt {
+            font-weight: bold;
+            /*フォントを太字にする*/
+        }
+        #profile dd {
+            font-size 1.3rem;
+            /*フォントを太字にする*/
+        }
+        #profile dd blockquote {
+            font-size: 1rem;
+        }
+        #profile dl h2 i {
+            color: #5f5;
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+        #skill {
+            background-color: rgba(100, 150, 160, 0.4);
+        }
+        #skill h2 i {
+            color: #00f;
+            font-size: 2.5rem;
+            margin-right: 10px;
+        }
+        #shi li {
+            list-style: url(images/shikaku.png)
+        }
+        #lang li {
+            list-style: url(images/jijyurtu.png)
+        }
+        /*=============================================
+            footer
+        ==============================================*/
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            /*テキストの中央寄せ*/
+            margin-top: 3%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Ryosuke Kodama's<br>Portfolio</h1>
+    </header>
+
+    <main>
+        <!--htmlの記法を駆使し、自己紹介文を作成する
+    内容
+    ・基本的なプロフィール
+    名前（ルビ付き）、出身、生年月日、趣味、好きな言葉、持っている資格（取りたい資格）最低３つリスト形式で。　今学んでいること（言語、技術）最低３つリスト形式で。
+    これらを適切な見出しを付けつつHTMLで記述すること-->
+        <section id="profile">
+            <h1>【Profile/自己紹介】</h1>
+            <dl>
+                <h2><i class="fas fa-id-card-alt"></i>基本的な情報</h2>
+                <dt>名前</dt>
+                <dd>
+                    <ruby>
+                        <rb>児玉</rb>
+                        <rt>こだま</rt>
+                        <rb>涼介</rb>
+                        <rt>りょうすけ</rt>
+                    </ruby>
+                </dd>
+
+                <dt>出身</dt>
+                <dd>岩手県盛岡市</dd>
+
+                <dt>生年月日</dt>
+                <dd>平成 13年 8月 15日</dd>
+
+                <dt>趣味</dt>
+                <dd>ゲーム／音楽鑑賞／</dd>
+                <dt>好きな言葉</dt>
+                <dd>
+                    <blockpuote cite="https://dic.pixiv.net/a/%E6%AF%94%E4%BC%81%E8%B0%B7%E5%85%AB%E5%B9%A1">
+                        押して駄目なら諦めろ
+                        <cite>比企谷八幡</cite>
+                    </blockpuote>
+                </dd>
+            </dl>
+        </section>
+
+        <section id="skill">
+            <dl>
+                <h2><i class="far fa-address-card"></i>持っている(取りたい)資格</h2>
+                <ul id=shi>
+                    <dt>持っている資格</dt>
+                    <dd>
+                        <li>情報システム試験 基本スキル</li>
+                        <li>情報システム試験 システムデザインスキル</li>
+                        <li>日本語ワープロ検定準２級</li>
+                        <li>AI検定</li>
+                    </dd>
+
+                    <dt>ネタ資格</dt>
+                    <dd>
+                        <li>食物調理技術検定4級</li>
+                    </dd>
+                </ul>
+            </dl>
+        </section>
+    </main>
+
+    <footer>
+        <small>&copy;Ryosuke Kodama 2021</small>
+    </footer>
+</body></html>
